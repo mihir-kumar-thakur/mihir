@@ -41,7 +41,7 @@
 }
 
 #thumbnail-slider ul li {
-  opacity:0.5;
+  opacity: 0.7;
   display:inline-block;
   *display:inline!important; /*IE7 hack*/
 
@@ -62,7 +62,7 @@
 }
 
 #thumbnail-slider ul li:after {
-  content:"ENLARGE";
+  content:"PLAYING";
   display:block;
   position:absolute;
   top:7px;
@@ -173,5 +173,15 @@
 }
 
 footer {
-  padding: 25px;
+  background-color: #2B1D10;
+}
+
+/*#aplayer_bar {
+  box-shadow: none;
+}*/
+
+.aplayer-list {
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(233, 233, 233);
 }

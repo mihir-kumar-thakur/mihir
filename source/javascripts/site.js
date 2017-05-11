@@ -1,8 +1,6 @@
 //= require angular
 //= require_tree .
 
-
-
 var app = angular.module('myApp', []);
 
 app.config([
@@ -19,18 +17,32 @@ app.directive("aplayer", function() {
       var ap1 = new APlayer({
         element: nativeElement,
         narrow: false,
-        autoplay: true,
+        autoplay: false,
         showlrc: false,
         mutex: true,
-        theme: '#e6d0b2',
-        preload: 'metadata',
+        theme: '#ad7a86',
         mode: 'circulation',
-        music: {
-          title: attrs["playerTitle"],
-          author: attrs["playerAuthor"],
-          url: attrs["playerUrl"],
-          pic: attrs["playerPic"]
+        listmaxheight: '0px',
+        music:[
+        {
+            title: 'あっちゅ～ま青春!',
+            author: '七森中☆ごらく部',
+            url: 'http://devtest.qiniudn.com/あっちゅ～ま青春!.mp3',
+            pic: 'http://devtest.qiniudn.com/あっちゅ～ま青春!.jpg'
+        },
+        {
+            title: 'secret base~君がくれたもの~',
+            author: '茅野愛衣',
+            url: 'http://devtest.qiniudn.com/secret base~.mp3',
+            pic: 'http://devtest.qiniudn.com/secret base~.jpg'
+        },
+        {
+            title: '回レ！雪月花',
+            author: '小倉唯',
+            url: 'http://devtest.qiniudn.com/回レ！雪月花.mp3',
+            pic: 'http://devtest.qiniudn.com/回レ！雪月花.jpg'
         }
+    ]
       });
     }
   };
