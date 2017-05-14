@@ -30,7 +30,7 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
   return {
     restrict : "AC",
     controller: function($scope) {
-      this.setValue = function(value) {
+      $scope.setValue = function(value) {
         $scope.value = value;
       },
       $scope.ngFn = function () {
@@ -60,7 +60,7 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
         listmaxheight: '0px',
         music: music
       });
-      // ctrl.setValue(ap1);
+      scope.setValue(ap1);
     }
   };
 }]);
