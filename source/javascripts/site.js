@@ -9,7 +9,7 @@ app.config([
   }
 ]);
 
-app.controller('TestCtrl', function($scope) {
+app.controller('TestCtrl', ['$scope', function ($scope) {
   $scope.musics = [
         {
             title: 'secret base~君がくれたもの~',
@@ -24,7 +24,7 @@ app.controller('TestCtrl', function($scope) {
             pic: 'http://devtest.qiniudn.com/回レ！雪月花.jpg'
         }
     ];
-}).directive("aplayer", function() {
+}]).directive("aplayer", function() {
   return {
     restrict : "AC",
     controller: function($scope) {
