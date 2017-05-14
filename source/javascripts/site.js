@@ -62,17 +62,3 @@ app.controller('TestCtrl', function($scope) {
     }
   };
 });
-
-// app.directive('foo', function() {
-//   return {
-//     scope: {},
-//     controller: function($scope) {
-//       this.setValue = function(value) {
-//         console.log("setting value: " + value);
-//       };
-//     },
-//     link: function(scope, element, attr, ctrl) {
-//       ctrl.setValue('foo');
-//     }
-//   };
-// });
