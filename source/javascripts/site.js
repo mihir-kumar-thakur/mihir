@@ -24,7 +24,7 @@ app.controller('TestCtrl', ['$scope', function ($scope) {
             pic: 'http://devtest.qiniudn.com/回レ！雪月花.jpg'
         }
     ];
-}]).directive("aplayer", function() {
+}]).directive("aplayer", ['$http', function ($http) {
   return {
     restrict : "AC",
     controller: function($scope) {
@@ -61,4 +61,4 @@ app.controller('TestCtrl', ['$scope', function ($scope) {
       ctrl.setValue(ap1);
     }
   };
-});
+}]);
