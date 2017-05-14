@@ -1,13 +1,15 @@
 //= require angular
 //= require_tree .
 
+'use strict';
+
 var app = angular.module('myApp', []);
 
-// app.config([
-//   '$interpolateProvider', function($interpolateProvider) {
-//     return $interpolateProvider.startSymbol('{(').endSymbol(')}');
-//   }
-// ]);
+app.config([
+  '$interpolateProvider', function($interpolateProvider) {
+    return $interpolateProvider.startSymbol('{(').endSymbol(')}');
+  }
+]);
 
 app.controller("TestCtrl", ["$scope", function ($scope) {
   $scope.musics = [
