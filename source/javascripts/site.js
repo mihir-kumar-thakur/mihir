@@ -60,7 +60,7 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
         listmaxheight: '0px',
         music: music
       });
-      ctrl.setValue(ap1);
+      // ctrl.setValue(ap1);
     }
   };
 }]);
