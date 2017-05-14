@@ -29,7 +29,7 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
 }]).directive("aplayer", [function () {
   return {
     restrict : "AC",
-    controller: function($scope) {
+    controller: ['$scope', function($scope) {
       this.setValue = function(value) {
         $scope.value = value;
       },
@@ -45,7 +45,7 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
         }])
         player.setMusic(current_song_no);
       }
-    },
+    }],
     link: function(scope, element, attrs, ctrl) {
       var nativeElement = element[0];
       var music = scope.musics;
