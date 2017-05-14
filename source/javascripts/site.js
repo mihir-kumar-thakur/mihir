@@ -9,7 +9,7 @@ var app = angular.module('myApp', []);
 //   }
 // ]);
 
-app.controller('TestCtrl', ['$scope', function ($scope) {
+app.controller("TestCtrl", ["$scope", function ($scope) {
   $scope.musics = [
         {
             title: 'secret base~君がくれたもの~',
@@ -24,7 +24,7 @@ app.controller('TestCtrl', ['$scope', function ($scope) {
             pic: 'http://devtest.qiniudn.com/回レ！雪月花.jpg'
         }
     ];
-}]).directive("aplayer", ['$http', function ($http) {
+}]).directive("aplayer", ["$http", function ($http) {
   return {
     restrict : "AC",
     controller: function($scope) {
