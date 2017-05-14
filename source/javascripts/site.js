@@ -26,11 +26,11 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
             pic: 'http://devtest.qiniudn.com/回レ！雪月花.jpg'
         }
     ];
-}]).directive("aplayer", ["$http", function ($http) {
+}]).directive("aplayer", function () {
   return {
     restrict : "AC",
     controller: function($scope) {
-      $scope.setValue = function(value) {
+      this.setValue = function(value) {
         $scope.value = value;
       },
       $scope.ngFn = function () {
@@ -60,7 +60,7 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
         listmaxheight: '0px',
         music: music
       });
-      scope.setValue(ap1);
+      ctrl.setValue(ap1);
     }
   };
-}]);
+});
