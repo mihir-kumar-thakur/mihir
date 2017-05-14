@@ -35,7 +35,7 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
       },
       $scope.ngFn = function () {
         console.log("ngFn is triggered!");
-        var current_song_no = angular.element(document.querySelectorAll("ol li")).length;
+        // var current_song_no = angular.element(document.querySelectorAll("ol li")).length;
         var player = $scope.value;
         player.addMusic([{
           title: 'Mihir TestCtrl',
@@ -43,7 +43,7 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
           url: 'https://wynk-play.akamaized.net/srch_unisysinfo/music/64/1493270976/srch_unisysinfo_M0904771.mp3?token=1494727952_4cc9a4a5149708725b717a1efb526154',
           pic: 'http://devtest.qiniudn.com/あっちゅ～ま青春!.jpg'
         }])
-        player.setMusic(current_song_no);
+        player.setMusic(2);
       }
     },
     link: function(scope, element, attrs, ctrl) {
