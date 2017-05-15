@@ -29,21 +29,20 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
 }]).directive("aplayer", [function () {
   return {
     restrict : "AC",
-    controller: ['$scope', function($scope) {
+    controller: ['$scope', '$http', function($scope, $http) {
       this.setValue = function(value) {
         $scope.value = value;
       },
       $scope.ngFn = function () {
-        console.log("ngFn is triggered!");
         var current_song_no = angular.element(document.querySelectorAll("ol li")).length;
         var player = $scope.value;
-        player.addMusic([{
-          title: 'Mihir TestCtrl',
-          author: 'Mihir Hello',
-          url: 'https://wynk-play.akamaized.net/srch_unisysinfo/music/64/1493270976/srch_unisysinfo_M0904771.mp3?token=1494727952_4cc9a4a5149708725b717a1efb526154',
-          pic: 'http://devtest.qiniudn.com/あっちゅ～ま青春!.jpg'
-        }])
-        player.setMusic(current_song_no);
+        $http.get("https://raw.githubusercontent.com/thakurmihir/mihir/master/data/songs.json")
+          .then(function(response) {
+            debugger
+            alert(response.data.songs);
+            player.addMusic(response.data.songs);
+            player.setMusic(current_song_no);
+        });
       }
     }],
     link: function(scope, element, attrs, ctrl) {
