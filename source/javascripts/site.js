@@ -38,8 +38,6 @@ app.controller("TestCtrl", ["$scope", function ($scope) {
         var player = $scope.value;
         $http.get("https://raw.githubusercontent.com/thakurmihir/mihir/master/data/songs.json")
           .then(function(response) {
-            debugger
-            alert(response.data.songs);
             player.addMusic(response.data.songs);
             player.setMusic(current_song_no);
         });
