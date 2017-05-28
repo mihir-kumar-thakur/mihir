@@ -6,33 +6,84 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="#">Soulful Bhajans</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
+        <!-- <li><a href="#">Products</a></li>
         <li><a href="#">Deals</a></li>
-        <li><a href="#">Stores</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">Stores</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li> -->
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li> -->
+        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="container-fluid">
+  <div class="well well-sm">
+    <h4 class="serif_font_family">Top Albums</h4><hr class="list_hr">
+    <div ng-controller="AlbumsController">
+      <flex-slider class="carousel" slide="s in slides" animation="slide" animation-loop="false" item-width="320" item-margin="5" control-nav=false touch=true>
+        <li>
+          <img ng-src="{( s )}">
+        </li>
+      </flex-slider>
+    </div>
+  </div>
+  <div class="well well-sm">
+    <h4 class="serif_font_family">Top Albums</h4><hr class="list_hr">
+    <div ng-controller="AlbumsController">
+      <flex-slider class="carousel" slide="s in slides" animation="slide" animation-loop="false" item-width="320" item-margin="5" control-nav=false touch=true>
+        <li>
+          <img ng-src="{( s )}">
+        </li>
+      </flex-slider>
+    </div>
+  </div>
+  <div class="well well-sm">
+    <h4 class="serif_font_family">Top Albums</h4><hr class="list_hr">
+    <div ng-controller="AlbumsController">
+      <flex-slider class="carousel" slide="s in slides" animation="slide" animation-loop="false" item-width="320" item-margin="5" control-nav=false touch=true>
+        <li>
+          <img ng-src="{( s )}">
+        </li>
+      </flex-slider>
+    </div>
+  </div>
+  <div class="well well-sm">
+    <h4 class="serif_font_family">Top Albums</h4><hr class="list_hr">
+    <div ng-controller="AlbumsController">
+      <flex-slider class="carousel" slide="s in slides" animation="slide" animation-loop="false" item-width="320" item-margin="5" control-nav=false touch=true>
+        <li>
+          <img ng-src="{( s )}">
+        </li>
+      </flex-slider>
+    </div>
+  </div>
+  <div class="well well-sm">
+    <h4 class="serif_font_family">Top Albums</h4><hr class="list_hr">
+    <div ng-controller="AlbumsController">
+      <flex-slider class="carousel" slide="s in slides" animation="slide" animation-loop="false" item-width="320" item-margin="5" control-nav=false touch=true>
+        <li>
+          <img ng-src="{( s )}">
+        </li>
+      </flex-slider>
+    </div>
+  </div>
 </div>
-
-<div class="container-fluid">
+<div class='footer_separator'></div>
 <footer class="navbar-fixed-bottom">
+<div class="container-fluid">
   <div ng-controller="TestCtrl">
     <button id="forJq" ng-click="ngFn()">Try me!</button>
     <div id="aplayer_bar" class="aplayer"></div>
   </div>
+  </div>
 </footer>
-</div>
+
 
